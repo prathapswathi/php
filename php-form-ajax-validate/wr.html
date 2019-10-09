@@ -1,0 +1,60 @@
+<html>
+
+<head>
+    <style>
+        body{
+            text-align: center;
+            margin: 25px auto;
+            width: 500px;
+            /* border: 2px solid black; */
+            background-color: snow;
+
+          
+        }
+        head{
+            background-color: blueviolet;
+        }
+        form{
+            background-color: aqua;
+            margin: 30px solid;
+            border: 2px solid black;
+          
+        }
+        </style>
+    <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+    <script >
+$(function () {
+
+$('form').on('submit', function (e) {
+
+  e.preventDefault();
+
+            $.ajax({
+                type: 'post',
+                url: 'wr.php',
+                data: $('form').serialize(),
+                success: function () {
+                   alert("You data will be saved");
+                }
+            });
+
+        });
+        });
+
+    </script>
+
+</head>
+
+<body>
+
+    <form >
+      username:  <input type="text" name="username" id="name_of_user"><br><br>
+     user age:   <input type="text" name="userage" id="age_of_user"><br><br>
+       user course: <input type="text" name="usercourse" id="course_of_user"><br><br>
+        <input type="submit" name="submit" value="Submit">
+    </form>
+
+   
+</body>
+
+</html>

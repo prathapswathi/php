@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<Html>
+<head>
+    This is password hashing page
+    <style>
+        body{
+            text-align: center;
+        }
+        form{
+            margin: 30px;
+            border: 2px solid red;
+            width:350px;
+            text-align: center;
+        }
+    </style>
+    <link rel="stylesheet" href="bootstrap.css">
+</head>
+<body>
+    <form method="POST" action="hash.php">
+            Email:<input class="form-control" type="email" name="email" placeholder="Enter your mail address"><br><br>
+         password:<input class="form-control" minlength="5" type="password" name="password" placeholder="Enter your password"><br><br>
+ confirm password:<input class="form-control"  minlength="5" type="password" name="cpassword" placeholder="confirm your password"><br><br>
+        
+        <input class="btn btn-primary" type="submit" name="submit">
+    </form>
+</body>
+</Html>
